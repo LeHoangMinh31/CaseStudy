@@ -1,0 +1,14 @@
+{
+  "user": [
+    {
+      "id": "bonik",
+      "name": "le hoang minh",
+      "password": "123456",
+      "email": "le31012000@gmail.com",
+      "phone": "0978642331",
+      "country": "vietnam",
+      "address": "TG",
+      "gender": "male"
+    }
+  ]
+}
