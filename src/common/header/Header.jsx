@@ -1,15 +1,19 @@
-import React from "react"
+import React, { useContext } from "react"
 import "./Header.css"
 import Head from "./Head"
 import Search from "./Search"
 import Navbar from "./Navbar"
+import { AuthenticationContext } from "../../contexts/AuthenticationContext"
 
-const Header = ({ CartItem }) => {
+const Header = () => {
+
+  const { signedInUsername } = useContext(AuthenticationContext)
+
   return (
     <>
       <Head />
-      <Search CartItem={CartItem} />
-      <Navbar />
+      <Search />
+      <Navbar isUserSignedIn={Boolean(signedInUsername)} />
     </>
   )
 }
