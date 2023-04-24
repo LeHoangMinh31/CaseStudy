@@ -1,83 +1,72 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { toast } from "react-toastify";
+import api from "../../api";
+import { AuthenticationContext } from '../../contexts/AuthenticationContext'
 
 const Login = () => {
-    const [username, usernameupdate] = useState('');
-    const [password, passwordupdate] = useState('');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
-    const usenavigate = useHistory();
+  const { setSignedInUsername } = useContext(AuthenticationContext)
 
-    useEffect(()=>{
-        sessionStorage.clear();
-    },[]);
+  const navigate = useHistory();
 
-    const ProceedLogin = (e) => {
-        e.preventDefault();
-        if (validate()) {
-            
-            fetch("http://localhost:3000/user/" + username).then((res) => {
-                return res.json();
-            }).then((resp) => {
-                //console.log(resp)
-                if (Object.keys(resp).length === 0) {
-                    toast.error('Please Enter valid username');
-                } else {
-                    if (resp.password === password) {
-                        toast.success('Success');
-                        sessionStorage.setItem('username',username);
-                        sessionStorage.setItem('userrole',resp.role);
-                        usenavigate('/')
-                    }else{
-                        toast.error('Please Enter valid credentials');
-                    }
-                }
-            }).catch((err) => {
-                toast.error('Login Failed due to :' + err.message);
-            });
-        }
+  useEffect(() => {
+    sessionStorage.clear();
+    setSignedInUsername(null)
+  }, []);
+
+  const ProceedLogin = async (e) => {
+    e.preventDefault();
+    if (validate()) {
+      api
+        .get(`users/${username}`)
+        .then((response) => {
+          if (response.data.password === password) {
+            sessionStorage.setItem('bonik-shop-user', username);
+            setSignedInUsername(username)
+            navigate.push('/')
+          } else {
+            alert('Please Enter valid credentials!')
+          }
+        })
+        .catch(() => {
+          alert('Please Enter valid credentials!')
+        })
     }
+  }
 
-    
-    const validate = () => {
-        let result = true;
-        if (username === '' || username === null) {
-            result = false;
-            toast.warning('Please Enter Username');
-        }
-        if (password === '' || password === null) {
-            result = false;
-            toast.warning('Please Enter Password');
-        }
-        return result;
+  const validate = () => {
+    let result = true;
+    if (username === '' || username === null) {
+      result = false;
+      alert('Please Enter Username')
     }
-    return (
-        <div className="row">
-            <div className="offset-lg-3 col-lg-6" style={{ marginTop: '100px' }}>
-                <form onSubmit={ProceedLogin} className="container">
-                    <div className="card">
-                        <div className="card-header">
-                            <h2>User Login</h2>
-                        </div>
-                        <div className="card-body">
-                            <div className="form-group">
-                                <label>User Name <span className="errmsg">*</span></label>
-                                <input value={username} onChange={e => usernameupdate(e.target.value)} className="form-control"></input>
-                            </div>
-                            <div className="form-group">
-                                <label>Password <span className="errmsg">*</span></label>
-                                <input type="password" value={password} onChange={e => passwordupdate(e.target.value)} className="form-control"></input>
-                            </div>
-                        </div>
-                        <div className="card-footer">
-                            <button type="submit" className="btn btn-primary">Login</button> |
-                            <Link className="btn btn-success" to={'/register'}>New User</Link>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    );
+    if (password === '' || password === null) {
+      result = false;
+      alert('Please Enter Password')
+    }
+    return result;
+  }
+
+  return (
+    <form onSubmit={ProceedLogin} className="container mtop" style={{ textAlign: "center" }}>
+      <div className="card-header mbottom">
+        <h2>User Login</h2>
+      </div>
+      <div className="form-group">
+        <label>Username <span className="errmsg">*</span></label>
+        <input value={username} onChange={e => setUsername(e.target.value)} className="form-control"></input>
+      </div>
+      <div className="form-group mbottom">
+        <label>Password <span className="errmsg">*</span></label>
+        <input type="password" value={password} onChange={e => setPassword(e.target.value)} className="form-control"></input>
+      </div>
+
+      <button type="submit" className="btn btn-primary" style={{ marginRight: '25px', cursor: "pointer" }}>Login</button>
+      <Link className="btn btn-success navigate-url" to={'/register'}>New User</Link>
+    </form>
+  );
 }
 
 export default Login;
