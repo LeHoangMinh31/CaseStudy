@@ -8,10 +8,10 @@ import Shop from "../components/shops/Shop"
 import Annocument from "../components/annocument/Annocument"
 import Wrapper from "../components/wrapper/Wrapper"
 
-const Pages = ({ productItems, addToCart, CartItem, shopItems }) => {
+const Pages = ({ productItems, addToCart, cartItems, shopItems }) => {
   return (
     <>
-      <Home CartItem={CartItem} />
+      <Home CartItem={cartItems} />
       <FlashDeals productItems={productItems} addToCart={addToCart} />
       <TopCate />
       <NewArrivals />
