@@ -8,14 +8,14 @@ const Footer = () => {
         <div className='container grid2'>
           <div className='box'>
             <h1>Bonik</h1>
-            <p>Tải app ngay tại.</p>
+            <p>Táº£i app ngay táº¡i.</p>
             <div className='icon d_flex'>
               <div className='img d_flex'>
-                <i class='fa-brands fa-google-play'></i>
+                <i className='fa-brands fa-google-play'></i>
                 <span>Google Play</span>
               </div>
               <div className='img d_flex'>
-                <i class='fa-brands fa-app-store-ios'></i>
+                <i className='fa-brands fa-app-store-ios'></i>
                 <span>App Store</span>
               </div>
             </div>
@@ -42,9 +42,9 @@ const Footer = () => {
             </ul>
           </div>
           <div className='box'>
-            <h2>Liên Hệ</h2>
+            <h2>LiÃªn Há»‡</h2>
             <ul>
-              <li>63A, Võ Văn Tần, Q. 3, Tp. Hồ Chí Minh </li>
+              <li>63A, VÃµ VÄƒn Táº§n, Q. 3, Tp. Há»“ ChÃ­ Minh </li>
               <li>Email: le31012000@gmail.com</li>
               <li>Phone: 0978642331</li>
             </ul>
