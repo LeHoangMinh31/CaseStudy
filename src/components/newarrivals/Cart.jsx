@@ -9,7 +9,7 @@ const Cart = () => {
           return (
             <div className='box' key={index}>
               <div className='img'>
-                <img src={val.cover} alt='' />
+                <img src={val.image} alt='' />
               </div>
               <h4>{val.name}</h4>
               <span>${val.price}</span>
