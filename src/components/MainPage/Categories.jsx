@@ -3,27 +3,27 @@ import React from "react"
 const Categories = () => {
   const data = [
     {
-      cateImg: "./images/category/cat1.png",
+      cateImg: "/images/category/cat1.png",
       cateName: "Fashion",
     },
     {
-      cateImg: "./images/category/cat2.png",
+      cateImg: "/images/category/cat2.png",
       cateName: "Electronic",
     },
     {
-      cateImg: "./images/category/cat5.png",
+      cateImg: "/images/category/cat5.png",
       cateName: "Gifts",
     },
     {
-      cateImg: "./images/category/cat8.png",
+      cateImg: "/images/category/cat8.png",
       cateName: "Fashion Pets",
     },
     {
-      cateImg: "./images/category/cat9.png",
+      cateImg: "/images/category/cat9.png",
       cateName: "Fashion Baby",
     },
     {
-      cateImg: "./images/category/cat11.png",
+      cateImg: "/images/category/cat11.png",
       cateName: "Accessory",
     },
   ]
@@ -45,3 +45,4 @@ const Categories = () => {
 }
 
 export default Categories
+
