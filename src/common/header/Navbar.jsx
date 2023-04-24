@@ -1,15 +1,21 @@
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
 import { Link } from "react-router-dom"
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
+import { AuthenticationContext } from "../../contexts/AuthenticationContext"
 
-const Navbar = () => {
+const Navbar = ({ isUserSignedIn }) => {
   // Toogle Menu
   const [MobileMenu, setMobileMenu] = useState(false)
+  const navigate = useHistory()
+
+  const { setSignedInUsername } = useContext(AuthenticationContext)
+
   return (
     <>
       <header className='header'>
         <div className='container d_flex'>
           <div className='catgrories d_flex'>
-            <span class='fa-solid fa-border-all'></span>
+            <span className='fa-solid fa-border-all'></span>
             <h4>
               Categories <i className='fa fa-chevron-down'></i>
             </h4>
@@ -30,17 +36,28 @@ const Navbar = () => {
               <li>
                 <Link to='/contact'>contact</Link>
               </li>
-              <li>
-                <Link to='/sign-in'>Login</Link>
-              </li>
-              <li>
-                <Link to='/register'>Register</Link>
-              </li>
-              <li>
-                <Link to='/sign-in'>Logout</Link>
-              </li>
+              {
+                isUserSignedIn
+                  ? (
+                    <li>
+                      <a href="#" onClick={() => {
+                        sessionStorage.clear()
+                        setSignedInUsername(null)
+                        navigate.push('/')
+                      }}>Logout</a>
+                    </li>
+                  ) : (
+                    <>
+                      <li>
+                        <Link to='/sign-in'>Login</Link>
+                      </li>
+                      <li>
+                        <Link to='/register'>Register</Link>
+                      </li>
+                    </>
+                  )
+              }
             </ul>
-
 
             <button className='toggle' onClick={() => setMobileMenu(!MobileMenu)}>
               {MobileMenu ? <i className='fas fa-times close home-btn'></i> : <i className='fas fa-bars open'></i>}
@@ -53,3 +70,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+
