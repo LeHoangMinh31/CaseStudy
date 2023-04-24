@@ -1,8 +1,12 @@
-import React from "react"
+import React, { useContext } from "react"
 import logo from "../../components/assets/images/logo.svg"
 import { Link } from "react-router-dom"
+import { CartContext } from "../../contexts/CartContext"
 
-const Search = ({ CartItem }) => {
+const Search = () => {
+
+  const { cartItems } = useContext(CartContext)
+
   // fixed Header
   window.addEventListener("scroll", function () {
     const search = document.querySelector(".search")
@@ -27,7 +31,7 @@ const Search = ({ CartItem }) => {
             <div className='cart'>
               <Link to='/cart'>
                 <i className='fa fa-shopping-bag icon-circle'></i>
-                <span>{CartItem.length === 0 ? "" : CartItem.length}</span>
+                <span>{cartItems.length === 0 ? "" : cartItems.length}</span>
               </Link>
             </div>
           </div>
