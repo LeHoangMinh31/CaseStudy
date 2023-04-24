@@ -47,7 +47,7 @@ li {
 .RText {
   text-align-last: right;
 }
-input,
+.search-box input,
 button {
   border: none;
   outline: none;
@@ -114,6 +114,15 @@ button {
 }
 .mtop {
   margin-top: 40px;
+}
+.mbottom {
+	margin-bottom: 30px !important;
+}
+.form-group {
+	margin: 10px 0;
+}
+.form-control {
+	height: 25px;
 }
 .heading i {
   color: #e94560;
@@ -246,4 +255,8 @@ button {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
+}
+
+a.navigate-url:hover {
+	color: #ff014f;
 }
