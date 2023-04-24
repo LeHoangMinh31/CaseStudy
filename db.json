@@ -1,0 +1,366 @@
+{
+  "users": [
+    {
+      "id": "bonik",
+      "name": "le hoang minh",
+      "password": "123456",
+      "email": "le31012000@gmail.com",
+      "phone": "0978642331",
+      "country": "vietnam",
+      "address": "TG",
+      "gender": "male"
+    },
+    {
+      "id": "minh",
+      "name": "hoang minh le",
+      "password": "123456",
+      "email": "le31012000@gmail.com",
+      "phone": "0978642331",
+      "country": "india",
+      "address": "TP HCM",
+      "gender": "female"
+    },
+    {
+      "id": "le minh",
+      "name": "le hoang minh",
+      "password": "123456",
+      "email": "le31012000@gmail.com",
+      "phone": "0978642331",
+      "country": "usa",
+      "address": "TP HCM",
+      "gender": "female"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "discount": 50,
+      "image": "/images/flash/flash-1.png",
+      "name": "Shoes",
+      "price": 100
+    },
+    {
+      "id": 2,
+      "discount": 40,
+      "image": "/images/flash/flash-2.png",
+      "name": "Watch",
+      "price": 20
+    },
+    {
+      "id": 3,
+      "discount": 40,
+      "image": "/images/flash/flash-3.png",
+      "name": "Smart Mobile Black",
+      "price": 200
+    },
+    {
+      "id": 4,
+      "discount": 40,
+      "image": "/images/flash/flash-4.png",
+      "name": "Smart Watch Black",
+      "price": 50
+    },
+    {
+      "id": 5,
+      "discount": 50,
+      "image": "/images/flash/flash-1.png",
+      "name": "Shoes",
+      "price": 100
+    },
+    {
+      "id": 6,
+      "discount": 50,
+      "image": "/images/flash/flash-3.png",
+      "name": "Shoes",
+      "price": 100
+    }
+  ],
+  "carts": [],
+  "orders": [
+    {
+      "username": "bonik",
+      "paymentMethod": "VISA",
+      "paymentInformation": {
+        "cardHolderName": "le hoang minh",
+        "cardNumber": "1234567890123456",
+        "cvv": "123"
+      },
+      "cartItems": [
+        {
+          "productId": 1,
+          "productName": "Shoes",
+          "productPrice": 100,
+          "productImage": "/images/flash/flash-1.png",
+          "username": "bonik",
+          "qty": 2,
+          "id": 1
+        },
+        {
+          "productId": 2,
+          "productName": "Watch",
+          "productPrice": 20,
+          "productImage": "/images/flash/flash-2.png",
+          "username": "bonik",
+          "qty": 1,
+          "id": 2
+        }
+      ],
+      "date": "2023-04-21T09:57:03.978Z",
+      "id": 3
+    },
+    {
+      "username": "bonik",
+      "paymentMethod": "COD",
+      "cartItems": [
+        {
+          "productId": 4,
+          "productName": "Smart Watch Black",
+          "productPrice": 50,
+          "productImage": "/images/flash/flash-4.png",
+          "username": "bonik",
+          "qty": 1,
+          "id": 1
+        }
+      ],
+      "date": "2023-04-21T09:58:24.721Z",
+      "id": 4
+    },
+    {
+      "username": "minh",
+      "paymentMethod": "COD",
+      "cartItems": [
+        {
+          "productId": 7,
+          "productName": "Mapple Earphones",
+          "productPrice": "180",
+          "productImage": "/images/shops/shops-1.png",
+          "username": "minh",
+          "qty": 2,
+          "id": 1
+        },
+        {
+          "productId": 15,
+          "productName": "Silver Cap",
+          "productPrice": "5",
+          "productImage": "/images/shops/shops-10.png",
+          "username": "minh",
+          "qty": 2,
+          "id": 2
+        }
+      ],
+      "date": "2023-04-21T10:02:25.640Z",
+      "id": 5
+    },
+    {
+      "username": "minh",
+      "paymentMethod": "COD",
+      "cartItems": [
+        {
+          "productId": 7,
+          "productName": "Mapple Earphones",
+          "productPrice": "180",
+          "productImage": "/images/shops/shops-1.png",
+          "username": "minh",
+          "qty": 2,
+          "id": 1
+        },
+        {
+          "productId": 15,
+          "productName": "Silver Cap",
+          "productPrice": "5",
+          "productImage": "/images/shops/shops-10.png",
+          "username": "minh",
+          "qty": 2,
+          "id": 2
+        }
+      ],
+      "date": "2023-04-21T10:02:35.128Z",
+      "id": 6
+    },
+    {
+      "username": "minh",
+      "paymentMethod": "VISA",
+      "paymentInformation": {
+        "cardHolderName": "hoang minh",
+        "cardNumber": "1234567812345678",
+        "cvv": "123"
+      },
+      "cartItems": [
+        {
+          "productId": 7,
+          "productName": "Mapple Earphones",
+          "productPrice": "180",
+          "productImage": "/images/shops/shops-1.png",
+          "username": "minh",
+          "qty": 2,
+          "id": 1
+        },
+        {
+          "productId": 15,
+          "productName": "Silver Cap",
+          "productPrice": "5",
+          "productImage": "/images/shops/shops-10.png",
+          "username": "minh",
+          "qty": 2,
+          "id": 2
+        }
+      ],
+      "date": "2023-04-21T10:03:33.248Z",
+      "id": 7
+    },
+    {
+      "username": "bonik",
+      "paymentMethod": "VISA",
+      "paymentInformation": {
+        "cardHolderName": "le hoang minh",
+        "cardNumber": "1234567812345678",
+        "cvv": "456"
+      },
+      "cartItems": [
+        {
+          "productId": 1,
+          "productName": "Shoes",
+          "productPrice": 100,
+          "productImage": "/images/flash/flash-1.png",
+          "username": "bonik",
+          "qty": 1,
+          "id": 1
+        },
+        {
+          "productId": 2,
+          "productName": "Watch",
+          "productPrice": 20,
+          "productImage": "/images/flash/flash-2.png",
+          "username": "bonik",
+          "qty": 1,
+          "id": 2
+        }
+      ],
+      "date": "2023-04-21T10:04:57.580Z",
+      "id": 8
+    },
+    {
+      "username": "bonik",
+      "paymentMethod": "VISA",
+      "paymentInformation": {
+        "cardHolderName": "le minh",
+        "cardNumber": "1234567812345678",
+        "cvv": "123"
+      },
+      "cartItems": [
+        {
+          "productId": 1,
+          "productName": "Shoes",
+          "productPrice": 100,
+          "productImage": "/images/flash/flash-1.png",
+          "username": "bonik",
+          "qty": 3,
+          "id": 1
+        },
+        {
+          "productId": 2,
+          "productName": "Watch",
+          "productPrice": 20,
+          "productImage": "/images/flash/flash-2.png",
+          "username": "bonik",
+          "qty": 3,
+          "id": 2
+        }
+      ],
+      "date": "2023-04-21T12:39:43.626Z",
+      "id": 9
+    },
+    {
+      "username": "le minh",
+      "paymentMethod": "COD",
+      "cartItems": [
+        {
+          "productId": 1,
+          "productName": "Shoes",
+          "productPrice": 100,
+          "productImage": "/images/flash/flash-1.png",
+          "username": "le minh",
+          "qty": 2,
+          "id": 1
+        },
+        {
+          "productId": 2,
+          "productName": "Watch",
+          "productPrice": 20,
+          "productImage": "/images/flash/flash-2.png",
+          "username": "le minh",
+          "qty": 2,
+          "id": 2
+        }
+      ],
+      "date": "2023-04-21T12:40:48.258Z",
+      "id": 10
+    },
+    {
+      "username": "le minh",
+      "paymentMethod": "VISA",
+      "paymentInformation": {
+        "cardHolderName": "minh",
+        "cardNumber": "1234567812345678",
+        "cvv": "123"
+      },
+      "cartItems": [
+        {
+          "productId": 1,
+          "productName": "Shoes",
+          "productPrice": 100,
+          "productImage": "/images/flash/flash-1.png",
+          "username": "le minh",
+          "qty": 1,
+          "id": 1
+        },
+        {
+          "productId": 2,
+          "productName": "Watch",
+          "productPrice": 20,
+          "productImage": "/images/flash/flash-2.png",
+          "username": "le minh",
+          "qty": 1,
+          "id": 2
+        },
+        {
+          "productId": 7,
+          "productName": "Mapple Earphones",
+          "productPrice": "180",
+          "productImage": "/images/shops/shops-1.png",
+          "username": "le minh",
+          "qty": 2,
+          "id": 3
+        }
+      ],
+      "date": "2023-04-21T12:52:22.639Z",
+      "id": 11
+    },
+    {
+      "username": "bonik",
+      "paymentMethod": "COD",
+      "cartItems": [
+        {
+          "productId": 1,
+          "productName": "Shoes",
+          "productPrice": 100,
+          "productImage": "/images/flash/flash-1.png",
+          "username": "bonik",
+          "qty": 1,
+          "id": 1
+        },
+        {
+          "productId": 2,
+          "productName": "Watch",
+          "productPrice": 20,
+          "productImage": "/images/flash/flash-2.png",
+          "username": "bonik",
+          "qty": 1,
+          "id": 2
+        }
+      ],
+      "date": "2023-04-21T13:10:05.404Z",
+      "id": 12
+    }
+  ]
+}
